@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SMART HYDRO NEXUS Design System
+   Aqua Blue (#00BFFF), Eco Green (#32CD32), Soft Beige (#FAF3E0)
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 48 67% 94%; /* Soft Beige */
+    --foreground: 195 100% 15%; /* Dark Aqua */
+
+    --card: 0 0% 100%;
+    --card-foreground: 195 100% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 100% 15%;
+
+    /* Primary: Aqua Blue */
+    --primary: 195 100% 50%; /* #00BFFF */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 195 100% 45%;
+    --primary-glow: 195 100% 60%;
+
+    /* Secondary: Eco Green */
+    --secondary: 120 61% 50%; /* #32CD32 */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 120 61% 45%;
+    --secondary-glow: 120 61% 60%;
+
+    /* Accent: Beige variations */
+    --accent: 48 67% 90%;
+    --accent-foreground: 195 100% 15%;
+    --accent-hover: 48 67% 85%;
+
+    --muted: 48 30% 90%;
+    --muted-foreground: 195 50% 35%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 48 30% 85%;
+    --input: 48 30% 88%;
+    --ring: 195 100% 50%;
+
+    /* Custom Design Tokens */
+    --aqua-light: 195 100% 85%;
+    --aqua-dark: 195 100% 25%;
+    --green-light: 120 61% 85%;
+    --green-dark: 120 61% 25%;
+    --beige-light: 48 67% 97%;
+    --beige-dark: 48 67% 80%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--beige-light)));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-eco: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-hover)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-eco: 0 4px 20px hsl(var(--secondary) / 0.2);
+    --shadow-card: 0 8px 25px hsl(var(--muted-foreground) / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with SMART HYDRO NEXUS theme */
+    --background: 195 100% 5%; /* Dark Aqua */
+    --foreground: 48 67% 94%;
+
+    --card: 195 100% 8%;
+    --card-foreground: 48 67% 94%;
+
+    --popover: 195 100% 8%;
+    --popover-foreground: 48 67% 94%;
+
+    --primary: 195 100% 55%;
+    --primary-foreground: 195 100% 5%;
+    --primary-hover: 195 100% 50%;
+    --primary-glow: 195 100% 65%;
+
+    --secondary: 120 61% 55%;
+    --secondary-foreground: 120 61% 5%;
+    --secondary-hover: 120 61% 50%;
+    --secondary-glow: 120 61% 65%;
+
+    --accent: 195 50% 15%;
+    --accent-foreground: 48 67% 94%;
+    --accent-hover: 195 50% 20%;
+
+    --muted: 195 30% 12%;
+    --muted-foreground: 48 30% 70%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 195 30% 18%;
+    --input: 195 30% 15%;
+    --ring: 195 100% 55%;
+
+    /* Dark variants */
+    --aqua-light: 195 100% 25%;
+    --aqua-dark: 195 100% 15%;
+    --green-light: 120 61% 25%;
+    --green-dark: 120 61% 15%;
+    --beige-light: 48 67% 15%;
+    --beige-dark: 48 67% 10%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--beige-light)));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-eco: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-hover)));
+
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.4);
+    --shadow-eco: 0 4px 20px hsl(var(--secondary) / 0.3);
+    --shadow-card: 0 8px 25px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary-hover text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-glow hover:scale-105 active:scale-95;
+  }
+
+  .btn-eco {
+    @apply bg-gradient-to-r from-secondary to-secondary-hover text-secondary-foreground px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-eco hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-glow hover:scale-105 active:scale-95;
+  }
+
+  /* Card Variants */
+  .card-gradient {
+    @apply bg-gradient-to-br from-background to-beige-light border border-border shadow-card rounded-2xl transition-all duration-300 hover:shadow-glow hover:-translate-y-1;
+  }
+
+  .card-eco {
+    @apply bg-gradient-to-br from-green-light/10 to-secondary/10 border border-secondary/20 shadow-eco rounded-2xl transition-all duration-300 hover:shadow-eco hover:-translate-y-1;
+  }
+
+  /* Animation Classes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-glow;
+  }
+
+  .hover-scale {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px hsl(var(--primary) / 0.5); }
+  100% { box-shadow: 0 0 40px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--secondary) / 0.3); }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
