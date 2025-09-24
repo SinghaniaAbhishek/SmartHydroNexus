@@ -230,16 +230,7 @@ const LoginPage = () => {
           </motion.div>
 
           {/* Demo Credentials */}
-          <motion.div
-            className="mt-4 p-3 bg-muted/50 rounded-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-          >
-            <p className="text-xs text-muted-foreground text-center">
-              Demo users: john@company.com/user123 | sarah@company.com/user456
-            </p>
-          </motion.div>
+          
         </motion.div>
 
         {/* Footer Links */}

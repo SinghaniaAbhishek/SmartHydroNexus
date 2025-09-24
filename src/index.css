@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* SMART HYDRO NEXUS Design System
-   Aqua Blue (#00BFFF), Eco Green (#32CD32), Soft Beige (#FAF3E0)
-   All colors MUST be HSL.
-*/
 
 @layer base {
   :root {
