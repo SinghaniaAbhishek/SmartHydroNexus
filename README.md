@@ -431,6 +431,6 @@ For questions, suggestions, or support:
 
 <div align="center">
 
-**Made with ❤️ for Sustainable Hydroelectric Power Management**
+**Made  for Sustainable Hydroelectric Power Management**
 
 </div>
